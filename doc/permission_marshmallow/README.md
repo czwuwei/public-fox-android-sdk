@@ -38,19 +38,19 @@ protected void onCreate(Bundle savedInstanceState) {
 
 @Override
 public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-	super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-	switch (requestCode) {
-		case PERMISSION_REQUEST_CODE_FOX:
-			if (grantResults.length > 1
-					&& grantResults[0] == PackageManager.PERMISSION_GRANTED
-					&& grantResults[1] == PackageManager.PERMISSION_GRANTED) {
+  super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+  switch (requestCode) {
+    case PERMISSION_REQUEST_CODE_FOX:
+      if (grantResults.length > 1
+          && grantResults[0] == PackageManager.PERMISSION_GRANTED
+          && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
         // ユーザーの承認を得てinstll計測を行う
-				sendFoxConversion();
-			}
-			break;
-		default:
-			break;
-	}
+        sendFoxConversion();
+      }
+      break;
+    default:
+      break;
+  }
 }
 
 
